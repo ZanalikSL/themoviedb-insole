@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Themoviedb - API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Themoviedb foi feito como parte do processo seletivo Insole para Frontend .
 
-## Available Scripts
+Ele consiste basicamente de uma lista dos filmes que estão passando nos cinemas. Ao clicar em um dos filmes, uma página cominformações mais detalhadas do filme selecionado será exibida. Tudo isso utilizando a API do [Themoviedb](https://www.themoviedb.org/documentation/api) 
 
-In the project directory, you can run:
+![image](https://user-images.githubusercontent.com/71197933/131373135-3783ab82-ab5a-4fe4-8f31-cc0883b52fef.png)
 
-### `yarn start`
+## Link para a DEMO
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[DEMO](https://vulgar-fly.surge.sh/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Principais tecnologias utilizadas
 
-### `yarn test`
+- React
+- Axios
+- Bootstrap
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instalação
 
-### `yarn build`
+ Clone o projeto e acesse a pasta do mesmo.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+$ git clone https://github.com/ZanalikSL/themoviedb-insole
+$ cd themoviedb-insole
+$ cd themoviedb
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Uso
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Instalar as dependências
+$ npm i
 
-### `yarn eject`
+# Iniciar o projeto
+$ npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Melhorias para o projeto tendo como base os requisitos propostos
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Paginação (Não consegui implementar a tempo essa feat)
+- Melhorar o input do usuario. Tive problemas com o input do bootstrap e acabei adotando uma solução mais rapida. 
+  Com mais tempo para entender o problema, seria possivel deixar melhor alinhado com o design system.
+- Na pagina de Detalhes do filme a tabela não contem os dados dos atores corretamente. Não consegui encontrar a tempo como procurar isso na API, tive deixar mockado para entregar.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
