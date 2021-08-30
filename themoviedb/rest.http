@@ -1,0 +1,3 @@
+# GET https://api.themoviedb.org/3/movie/now_playing?api_key=84029d900d2e11bcb76ccdc09aec7fd7&language=pt-BR&page=1
+
+GET https://api.themoviedb.org/3/genre/movie/706972?api_key=84029d900d2e11bcb76ccdc09aec7fd7&language=pt-BR
