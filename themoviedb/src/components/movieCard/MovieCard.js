@@ -2,16 +2,23 @@ import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 import ListGroupItem from 'react-bootstrap/ListGroupItem'
 
+import { useHistory } from 'react-router-dom'
+
+import { goToMovieDetail } from '../../Routes/Coordinator'
+
 import { useGenre } from '../../context/genre'
+import { Container } from 'react-bootstrap'
 
 const MovieCard = (props) => {
   const { data } = props
   const { genreList } = useGenre()
-  console.log(data.id)
+  
+  const history = useHistory()
 
   return (
+    <Container>
     <Card style={{ width: '18rem', margin: '1%' }}>
-      <button>
+      <button onClick={() => goToMovieDetail(history, data.id)}>
         <Card.Img
           variant="top"
           src={`https://image.tmdb.org/t/p/original${data.poster_path}`}
@@ -35,6 +42,7 @@ const MovieCard = (props) => {
         </Card.Footer>
       </Card.Body>
     </Card>
+    </Container>
   )
 }
 

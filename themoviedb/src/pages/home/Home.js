@@ -8,22 +8,20 @@ import NavBar from '../../components/NavBar/Navbar'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import InputGroup from 'react-bootstrap/InputGroup'
-import FormControl from 'react-bootstrap/FormControl'
-import Button from 'react-bootstrap/Button'
 
 export function Home() {
   const [nowPlaying, setNowPlaying] = useState([])
   const [filteredMovie, setFilteredMovie] = useState('')
   const [searchBoolean, setSearchBoolean] = useState(false)
 
+  const [pagination, setPagination] = useState('1')
+
   useEffect(() => {
     async function getUser() {
       try {
         const response = await axios.get(
-          'https://api.themoviedb.org/3/movie/now_playing?api_key=84029d900d2e11bcb76ccdc09aec7fd7&language=pt-BR&page=1'
+          `https://api.themoviedb.org/3/movie/now_playing?api_key=84029d900d2e11bcb76ccdc09aec7fd7&language=pt-BR&page=${pagination}`
         )
-        console.log(response.data)
         setNowPlaying(response.data.results)
       } catch (error) {
         if (error.response) {
@@ -79,17 +77,20 @@ export function Home() {
   return (
     <>
       <NavBar />
-      <form onSubmit={handleSubmit}>
-        <label>
-          Movie: <input type="text" value={filteredMovie} onChange={handleInput}/>
-        </label>
-        <input type="submit" value="Enviar"/>
-      </form>
-      <Container style={{ margin: '50px 0 0 0' }}>
-        <Row xs={'auto'} md={'auto'} className="g-4">
-          {!!nowPlaying.length &&
-            nowPlaying.map((movie) => <MovieCard data={movie} />)}
-        </Row>
+      <Container>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Movie:{' '}
+            <input type="text" value={filteredMovie} onChange={handleInput} />
+          </label>
+          <input type="submit" value="Enviar" />
+        </form>
+        <Container style={{ margin: '50px 0 0 0' }}>
+          <Row xs={'auto'} md={'auto'} className="g-4">
+            {!!nowPlaying.length &&
+              nowPlaying.map((movie) => <MovieCard data={movie} />)}
+          </Row>
+        </Container>
       </Container>
     </>
   )

@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom'
+import Router from './Routes/Router'
 
 import './App.css'
 
@@ -10,10 +10,7 @@ import { MovieDetail } from './pages/movieDetail/MovieDetail'
 export function App() {
   return (
     <AppProvider>
-      <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/movie/:id" component={MovieDetail} />
-      </Switch>
+      <Router/>
     </AppProvider>
   )
 }
