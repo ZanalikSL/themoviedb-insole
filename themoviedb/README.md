@@ -41,7 +41,7 @@ $ npm start
 - Paginação (Não consegui implementar a tempo essa feat)
 - Melhorar o input do usuario. Tive problemas com o input do bootstrap e acabei adotando uma solução mais rapida. 
   Com mais tempo para entender o problema, seria possivel deixar melhor alinhado com o design system.
-- Na pagina de Detalhes do filme a tabela não contem os dados dos atores corretamente. Não consegui encontrar a tempo como procurar isso na API, tive deixar mockado para entregar.
+- Na pagina de Detalhes do filme a tabela não contem os dados dos atores corretamente. Não ebservei isso na API, resolvi deixar mockado para entregar numa correção futura.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
